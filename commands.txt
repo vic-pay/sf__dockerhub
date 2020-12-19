@@ -1,0 +1,5 @@
+sudo usermod -a -G docker victor
+docker run –d –p 80:80 sf_dockerhub_payva
+docker image tag sf_dockerhub_payva vicpay/sf_dockerhub_payva:latest
+docker login
+docker image push vicpay/sf_dockerhub_payva:latest
